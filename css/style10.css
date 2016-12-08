@@ -13,13 +13,12 @@ h1 {
   margin: 0 auto;
 }
 
-p{
+/* p{
   margin: 10px 0 20px 0;
   color: grey;
-}
+} */
 
 main {
-  
   width: 50%;
   margin: 0 auto;
   text-align: center;
@@ -28,20 +27,22 @@ main {
 
 .box {
   display: inline-block;
-  width: calc((100% - 70px)/3);
-  margin: 10px;
-  height: 100px;
-  color: white;
-  font-size:20px;
-  word-break: break-all;
-  padding: 100px 0 30px 0;
+  box-sizing: border-box;
+  width: 30%;
+  margin: 0;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
 }
 
 .seeall {
   display: block;
 }
 
-.sanfrancisco {
+/* .sanfrancisco {
   background: url("../img/san-francisco.jpg");
   background-size: cover;
 }
@@ -69,7 +70,7 @@ main {
 .sonoma {
   background: url("../img/sonoma.jpg");
   background-size: cover;
-}
+} */
 
 button {
   color: grey;
@@ -82,6 +83,20 @@ button {
   border: 1.5px rgba(112,120,112,0.4) solid;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  top: -125px;
+  display: inline-block;
+  width: 30%;
+  color: white;
+}
+
 @media (max-width: 600px) {
   main {
     width: 90%;
@@ -90,5 +105,23 @@ button {
   .box {
     width: 100%;
     margin: 10px auto;
+  }
+
+  li {
+    box-sizing: border-box;
+    display: block;
+    top: -650px;
+    width: 100%;
+    margin: 20% 0 40% 0;
+  }
+
+  button{
+    position:relative;
+    top: -700px;
+  }
+
+  .container {
+    position: relative;
+    top: -650px;
   }
 }
